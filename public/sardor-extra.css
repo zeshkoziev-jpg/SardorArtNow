@@ -1,0 +1,40 @@
+#bg-animation{display:none!important}
+
+#sa-rain{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.sa-drop{position:absolute;top:-60px;opacity:.4;animation-name:saFall,saSway;
+  animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;
+  filter:drop-shadow(0 0 6px rgba(255,200,80,.35))}
+@keyframes saFall{to{top:110vh}}
+@keyframes saSway{0%,100%{transform:translateX(0) rotate(-15deg)}50%{transform:translateX(30px) rotate(20deg)}}
+
+/* FOOTER */
+.sa-ft{position:relative;z-index:2;
+  background:linear-gradient(180deg,rgba(20,24,56,.85),#080b1c)!important;
+  border-top:2px solid transparent!important;
+  border-image:linear-gradient(90deg,transparent,#ffd978,transparent) 1!important;
+  box-shadow:0 -12px 40px rgba(255,200,80,.08);
+  padding:28px 6%!important;color:#e9ecff!important;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.sa-ft a,.sa-ft span,.sa-ft p{color:#d7dcff}
+.sa-ft button{border-radius:8px;transition:.25s}
+.sa-ft button:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(255,200,80,.25)}
+
+/* BANK KARTALAR */
+.sa-pay{display:inline-flex!important;flex-direction:column;justify-content:space-between;
+  width:128px;height:80px;padding:10px 12px!important;margin:4px 6px;border-radius:12px!important;
+  border:none!important;color:#fff!important;font-weight:800;font-size:14px;letter-spacing:1.5px;
+  box-shadow:0 8px 20px rgba(0,0,0,.5);position:relative;overflow:hidden;
+  transition:transform .35s,box-shadow .35s;cursor:default}
+.sa-pay::before{content:"";width:24px;height:17px;border-radius:4px;
+  background:linear-gradient(135deg,#f6d77a,#c99a2e)}
+.sa-pay::after{content:"";position:absolute;top:-40%;left:-60%;width:50%;height:200%;
+  background:rgba(255,255,255,.2);transform:rotate(25deg);transition:left .7s}
+.sa-pay:hover{transform:translateY(-6px) rotate(-2deg);box-shadow:0 14px 28px rgba(255,200,80,.3)}
+.sa-pay:hover::after{left:130%}
+.sa-humo{background:linear-gradient(135deg,#00b894,#006d5b)!important}
+.sa-uzcard{background:linear-gradient(135deg,#1e5bff,#0a2a8f)!important}
+.sa-visa{background:linear-gradient(135deg,#1a1f71,#3b4bd8)!important;font-style:italic}
+.sa-mastercard{background:
+  radial-gradient(circle at 78% 30%,#eb001b 0 13px,transparent 14px),
+  radial-gradient(circle at 90% 30%,rgba(247,158,27,.9) 0 13px,transparent 14px),
+  linear-gradient(135deg,#2b2b2b,#0e0e0e)!important}

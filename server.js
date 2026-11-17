@@ -19,8 +19,8 @@ if (fs.existsSync('.env')) {
 }
 
 const PORT = process.env.PORT || 3000;
-const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const BOT_USERNAME = process.env.TELEGRAM_BOT_USERNAME || 'SardorArtBot';
+const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '9249309686:AAGi_a_H30qzf2q-LQyzF1yxmhgaDtQwTDc';
+const BOT_USERNAME = process.env.TELEGRAM_BOT_USERNAME || 'SardorArt_bot';
 const SITE_URL = process.env.SITE_URL || `http://localhost:${PORT}`;
 
 const DATA_FILE = path.join(__dirname, 'data.json');
